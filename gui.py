@@ -67,10 +67,10 @@ def play():
     label2.config(bg='black', bd=6, height=2, width=28, fg="red", font=("", "14", "bold"))
     label2.place(y=191)
 
-photo = PhotoImage(file='C:\\Users\\Prashant\\Desktop\\photo.png')
-photo1 = PhotoImage(file='C:\\Users\\Prashant\\Desktop\\stone.png')
-photo2 = PhotoImage(file='C:\\Users\\Prashant\\Desktop\\paper.png')
-photo3 = PhotoImage(file='C:\\Users\\Prashant\\Desktop\\scissor.png')
+photo = PhotoImage(file='C:\\Users\\Prashant\\Documents\\GitHub\\Stone-Paper-Scissors\\photo.png')
+photo1 = PhotoImage(file='C:\\Users\\Prashant\\Documents\\GitHub\\Stone-Paper-Scissors\\stone.png')
+photo2 = PhotoImage(file='C:\\Users\\Prashant\\Documents\\GitHub\\Stone-Paper-Scissors\\paper.png')
+photo3 = PhotoImage(file='C:\\Users\\Prashant\\Documents\\GitHub\\Stone-Paper-Scissors\\scissor.png')
 
 game_logo = Label(root, bg="white", bd=0, relief=SUNKEN)
 game_logo.pack()
