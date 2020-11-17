@@ -1,5 +1,6 @@
 from tkinter import *
 from Stone_Paper_Scissor import *
+import time
 
 root=Tk()
 
@@ -21,17 +22,61 @@ mylabel.pack()
 mylabel.config(bg='aqua', bd=0, height=2, fg="red", font=("","14", "bold"))
 mylabel.place(y=242)
 
+def count1():
+    label_u = Label(root, text="scissor!", relief=SUNKEN)
+    label_u.pack()
+    label_u.config(bg='black', bd=6, height=2, width=10, fg="red", font=("", "14", "bold"))
+    label_u.place(x=242, y=191)
+    label_u.after(400,var_img)
+    
+def count2():
+    label2 = Label(root, text="paper!", relief=SUNKEN)
+    label2.pack()
+    label2.config(bg='black', bd=6, height=2, width=10, fg="red", font=("", "14", "bold"))
+    label2.place(x=108, y=191)
+    label2.after(400,count1)
+
+def count3():
+    label_c = Label(root, text="stone!", relief=SUNKEN)
+    label_c.pack()
+    label_c.config(bg='black', bd=6, height=2, width=10, fg="red", font=("", "14", "bold"))
+    label_c.place(y=191)
+    label_c.after(400,count2)
+
 def var_img():
     label_c = Label(root, bg='red', bd=8, relief=SUNKEN)
     label_c.pack()
     label_c.config(image=photo_c, width=92, height=42)
     label_c.place(y=191)
+
+    label2 = Label(root, textvariable=variable1, relief=SUNKEN)
+    label2.pack()
+    label2.config(bg='black', bd=6, height=2, width=10, fg="red", font=("", "14", "bold"))
+    label2.place(x=108, y=191)
     
     label_u = Label(root, bg='red', bd=8, relief=SUNKEN)
     label_u.pack()
     label_u.config(image=photo_u, width=92, height=42)
     label_u.place(x=242, y=191)
 
+def blank_var():
+    label_c = Label(root, relief=SUNKEN)
+    label_c.pack()
+    label_c.config(bg='red', bd=6, height=2, width=10, fg="red", font=("", "14", "bold"))
+    label_c.place(y=191)
+
+    label2 = Label(root, relief=SUNKEN)
+    label2.pack()
+    label2.config(bg='red', bd=6, height=2, width=10, fg="red", font=("", "14", "bold"))
+    label2.place(x=108, y=191)
+    
+    label_u = Label(root, relief=SUNKEN)
+    label_u.pack()
+    label_u.config(bg='red', bd=6, height=2, width=10, fg="red", font=("", "14", "bold"))
+    label_u.place(x=242, y=191)
+
+    label_u.after(300,count3)
+    
 def play():
     score1 = Label(root, text="COMPUTER: ")
     score1.pack()
@@ -73,11 +118,6 @@ def play():
     scissor_button.config(image=photo3, width=98, height=48)
     scissor_button.place(x=233, y=126)
     
-    label2 = Label(root, textvariable=variable1, relief=SUNKEN)
-    label2.pack()
-    label2.config(bg='black', bd=6, height=2, width=10, fg="red", font=("", "14", "bold"))
-    label2.place(x=108, y=191)
-
     var_img()
 
 photo = PhotoImage(file='C:\\Users\\Prashant\\Documents\\GitHub\\Stone-Paper-Scissors\\photo.png')
